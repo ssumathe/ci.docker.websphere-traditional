@@ -16,7 +16,7 @@
 ############################################################################
 
 # Build step - download and install tWAS
-FROM agent-installer:ubi8 as builder
+FROM centos:centos7
 RUN dnf --disableplugin=subscription-manager install -y openssl wget unzip
 
 ARG IBMID
